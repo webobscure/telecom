@@ -20,18 +20,40 @@
           </div>
         </div>
         <ul class="white-theme-list">
-          <li class="white-theme-list__item">
-            <p>Двухфакторная аутентификация</p>
+          <li class="white-theme-list__item" style="flex-direction: column;">
+            <p>
+              Двухфакторная аутентификация
+              <button class="button">
+                <img src="assets/note.svg" alt="action" style="margin-left: 139px;"/>
+              </button>
+            </p>
+            <p class="unactive" style="margin-top: -5px;">Не подключена</p>
           </li>
           <li class="white-theme-list__item">
             <p>Настройки безопасности и API</p>
+            <button class="button">
+              <img src="assets/path.svg" alt="action" />
+            </button>
           </li>
           <li class="white-theme-list__item">
             <p>Все протоколы интеграции</p>
+            <button class="button">
+              <img src="assets/path.svg" alt="action"  />
+            </button>
           </li>
         </ul>
-        <button class="white-theme-button">Создать пароль для API</button>
+        <button class="white-theme-button" onclick="openPopup()">Создать пароль для API</button>
+      </div>
+    </div>
+
+    <div id="popup">
+      <a class="close" onclick="openPopup()"><img src="assets/close.png" alt="close"></a>
+
+      <div class="content">
+        <h2>Заголовок</h2>
+        <p class="content-description">Lorem ipsum dolor sit amet consectetur. Pretium enim turpis posuere amet orci. Consectetur dui velit et quam id. Lorem ipsum dolor sit amet consectetur. </p>
       </div>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>

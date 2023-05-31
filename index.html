@@ -12,7 +12,7 @@
       <div class="white-theme-settings">
         <div class="white-theme-header">
           <div class="white-theme-settings-box">
-            <img src="assets/union.png" alt="union" class="white-theme__icon" />
+            <img src="assets/union.svg" onerror="this.onerror=null; this.src='assets/union.png'" alt="union" class="white-theme__icon" />
           </div>
           <div class="white-theme-info">
             <h3 class="white-theme-settings__title">Настройки</h3>
@@ -21,7 +21,7 @@
         </div>
         <ul class="white-theme-list">
           <li class="white-theme-list__item" style="flex-direction: column;">
-            <p>
+            <p class="item-white">
               Двухфакторная аутентификация
               <button class="button">
                 <img src="assets/note.svg" alt="action" style="margin-left: 139px;"/>
@@ -30,19 +30,19 @@
             <p class="unactive" style="margin-top: -5px;">Не подключена</p>
           </li>
           <li class="white-theme-list__item">
-            <p>Настройки безопасности и API</p>
+            <p class="item-white">Настройки безопасности и API</p>
             <button class="button">
               <img src="assets/path.svg" alt="action" />
             </button>
           </li>
           <li class="white-theme-list__item">
-            <p>Все протоколы интеграции</p>
+            <p class="item-white">Все протоколы интеграции</p>
             <button class="button">
               <img src="assets/path.svg" alt="action"  />
             </button>
           </li>
         </ul>
-        <button class="white-theme-button" onclick="openPopup()">Создать пароль для API</button>
+        <button class="white-popup-button" onclick="openPopup()">Создать пароль для API</button>
       </div>
     </div>
 

@@ -7,9 +7,12 @@ function openPopup() {
 }
 
 function switchTheme() {
-    const themeBox = document.getElementsByClassName('white-theme-box');
-    const box = document.getElementsByClassName('white-theme-settings-box');
-    const icon = document.getElementsByClassName('white-theme__icon');
-    const item = document.getElementsByClassName('item-white');
-    const popupButton = document.getElementsByClassName('white-popup-button') 
+    let close = document.getElementById("close");
+
+    document.body.classList.toggle("dark-theme")
+    if(document.body.classList.contains("dark-theme")) {
+        close.src = "assets/dark-close.png"
+    } else {
+        close.src = "assets/close.png"
+    }
 }

@@ -1,23 +1,53 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+:root {
+  --primary-color: #F8F8F8;
+  --box-color: #FFFFFF;
+  --settings-box-color: #E6F4FB;
+  --item-color: #1FA2DE;
+  --title-color: #252525;
+  --login-color: #919191;
+  --content-color: #252525;
+}
+.dark-theme {
+  --primary-color: #2D2D2D;
+  --box-color: #252525;
+  --settings-box-color: #404040;
+  --item-color: #31BEFF;
+  --title-color: #FFFFFF;
+  --login-color: #919191;
+  --content-color: #F8F8F8;
+}
 body {
-  background: #F8F8F8;
+  background: var(--primary-color);
 }
 h3 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 22px;
 }
-
 p {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
 }
-
+#theme-btn {
+  margin-left: 40%;
+  border: 1px solid var(--item-color);
+  background: var(--box-color);
+  color: var(--item-color);
+  width: 350px;
+  height: 40px;
+}
 .item-white {
-  color: #1FA2DE;
-  
+  color: var(--item-color);
 }
 button {
   font-family: 'Montserrat';
@@ -32,55 +62,63 @@ button {
   border: none;
   background: none;
 }
-.white-theme-box {
+.theme-box {
   margin: auto;
   margin-top: 240px;
   width: 398px;
   height: 310px;
-  background: #FFFFFF;
+  background: var(--box-color);
 }
-.white-theme-header {
+.theme-header {
   display: flex;
 }
-.white-theme-settings {
+.theme-settings {
   position: relative;
   top: 24px;
   left: 24px;
   width: 350px;
   height: 262px;
 }
-.white-theme-settings-box {
+.theme-settings-box {
   width: 50px;
   height: 50px;
-  background: #E6F4FB;
+  background: var(--settings-box-color);
   border-radius: 8px;
 }
-.white-theme__icon {
+.theme__icon {
   margin-top: 13.75px;
   margin-left: 13.75px;
   width: 22.5px;
   height: 22.5px;
 }
-.white-theme-info {
+.theme-info {
   line-height: 4px;
   margin-top: -20px;
   margin-left: 24px;
 }
-.white-theme-settings__title {
-  color: #252525;
+.theme-settings__title {
+  color: var(--title-color);
   margin-top: 15px;
 }
-.white-theme-settings__login {
-  color: #919191;
+.theme-settings__login {
+  color: var(--login-color);
 }
-.white-theme-list {
+.theme-list {
   display: flex;
   flex-direction: column;
-  margin-top: -10px;
+  margin-top: -5px;
   margin-left: -40px;
   list-style: none;
 }
-.white-theme-list__item {
+.icon-button {
+  margin-left: -115px;
+}
+.action {
+  position: absolute;
+  top: 65px;
+  left: 330px;
+}
+.theme-list__item {
   display: flex;
   justify-content: space-between;
   line-height: 18px;
@@ -89,41 +127,35 @@ button {
   flex-direction: row;
 }
 .unactive {
-  color: #919191;
+  margin-top: -5px;
+  color: var(--login-color);
 }
-.white-popup-button{
+.password-button {
   border: 1px solid #4db5e4;
-  background: #fff;
-  color: #1FA2DE;
+  background: var(--box-color);
+  color: var(--item-color);
   width: 100%;
   height: 40px;
-  margin-top: -3px;
+  margin-top: -50px;
 }
 /** Popup seciton **/
 #popup {
   position: fixed;
-  /*фиксированное позиционирование*/
   top: -100%;
-  /*прячем окно за пределы видимости*/
   left: 50%;
-  /*позиция окна слева*/
   transform: translate(-50%, -50%);
   z-index: 1000;
-  /*на верхний слой*/
-  background: #fff;
+  background: var(--box-color);
   width: 594px;
   height: 182px;
   padding: 48px 0px 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
   transition: 0.5s;
   visibility: hidden;
-  /*скрываем окно*/
 }
 #popup.active {
   visibility: visible;
-  /*показываем окно*/
   top: 50%;
-  /*окно выдвигается сверху*/
 }
 #popup .content {
   position: relative;
@@ -133,7 +165,8 @@ button {
   flex-direction: column;
 }
 #popup .content h2 {
-  margin-left: -345px;
+  margin-left: -395px;
+  color: var(--content-color);
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -141,15 +174,15 @@ button {
   line-height: 28px;
 }
 #popup .content p {
-  margin-top: -10px;
-  width: 428px;
+  margin-top: -17px;
+  width: 498px;
   height: 84px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #252525;
+  color: var(--title-color);
 }
 .close {
   position: absolute;
@@ -161,37 +194,6 @@ button {
   visibility: visible;
   top: 50%;
 }
-
-
-/** Dark theme **/
-.dark-theme-box {
-  margin: auto;
-  margin-top: 240px;
-  width: 398px;
-  height: 310px;
-  background: #252525;
-}
-
-.dark-theme-settings-box {
-  width: 50px;
-  height: 50px;
-  background: #404040;
-  border-radius: 8px;
-}
-
-.dark-theme__icon {
-  filter:brightness(10);
-}
-
-.item-dark {
-  color: #31BEFF;
-}
-
-.dark-popup-button {
-  border: 1px solid #4db5e4;
-  background: #252525;
-  color: #31BEFF;
-  width: 100%;
-  height: 40px;
-  margin-top: -3px;
+.close-icon {
+  color: #1FA2DE;
 }

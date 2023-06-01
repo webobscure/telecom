@@ -5,24 +5,8 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
 }
-:root {
-  --primary-color: #F8F8F8;
-  --box-color: #FFFFFF;
-  --settings-box-color: #E6F4FB;
-  --item-color: #1FA2DE;
-  --title-color: #252525;
-  --login-color: #919191;
-  --content-color: #252525;
-}
-.dark-theme {
-  --primary-color: #2D2D2D;
-  --box-color: #252525;
-  --settings-box-color: #404040;
-  --item-color: #31BEFF;
-  --title-color: #FFFFFF;
-  --login-color: #919191;
-  --content-color: #F8F8F8;
-}
+
+
 body {
   background: var(--primary-color);
 }
@@ -197,3 +181,38 @@ button {
 .close-icon {
   color: #1FA2DE;
 }
+
+
+@media( prefers-color-scheme: dark ) {
+ :root {
+  --primary-color: #2D2D2D;
+  --box-color: #252525;
+  --settings-box-color: #404040;
+  --item-color: #31BEFF;
+  --title-color: #FFFFFF;
+  --login-color: #919191;
+  --content-color: #F8F8F8;
+ }
+
+ #close {
+  content: url('../assets/dark-close.png');
+ }
+}
+
+@media( prefers-color-scheme: light ) {
+  :root {
+    --primary-color: #F8F8F8;
+    --box-color: #FFFFFF;
+    --settings-box-color: #E6F4FB;
+    --item-color: #1FA2DE;
+    --title-color: #252525;
+    --login-color: #919191;
+    --content-color: #252525;
+  }
+ 
+  #close {
+   content: url('../assets/close.png');
+  }
+ }
+
+

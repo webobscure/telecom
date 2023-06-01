@@ -82,7 +82,7 @@ button {
 }
 .theme-settings__title {
   color: var(--title-color);
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .theme-settings__login {
   color: var(--login-color);
@@ -158,7 +158,7 @@ button {
   line-height: 28px;
 }
 #popup .content p {
-  margin-top: -17px;
+  margin-top: -5px;
   width: 498px;
   height: 84px;
   font-family: 'Montserrat';
